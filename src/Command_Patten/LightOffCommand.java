@@ -23,6 +23,10 @@ public class LightOffCommand implements Command {
     public void undo() {
         light.on();
         System.out.println(this.light.getClass().getName() + "撤销成功");
+    }
 
+    @Override
+    public Light getLight() {
+        return light;
     }
 }

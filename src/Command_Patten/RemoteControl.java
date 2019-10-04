@@ -33,6 +33,9 @@ public class RemoteControl {
         } else if (offIndex != onIndex) {
             System.out.println("请将开关功能成对插入");
             return;
+        } else if (onCommand.getLight() == offCommand.getLight()) {
+            System.out.println("请插入同一个灯泡的开关功能");
+            return;
         }
         onCommands[onIndex] = onCommand;
         offCommands[offIndex] = offCommand;
@@ -53,9 +56,8 @@ public class RemoteControl {
             if (!(offCommands[i] instanceof NoCommand)) {
                 System.out.println("第" + i + "对功能按钮为" + onCommands[i].getClass().getName() + ":" + offCommands[i].getClass().getName());
             } else {
-                System.out.format("第%d对功能键可以插入\n", i);
+                System.out. format("第%d对功能键可以插入\n", i);
             }
-
         }
     }
 

@@ -24,4 +24,9 @@ public class LightOnCommand implements Command {
         light.off();
         System.out.println(this.light.getClass().getName() + "撤销成功");
     }
+
+    @Override
+    public Light getLight() {
+        return light;
+    }
 }
