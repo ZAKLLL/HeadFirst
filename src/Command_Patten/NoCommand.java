@@ -13,6 +13,11 @@ public class NoCommand  implements Command{
     }
 
     @Override
+    public Light getLight() {
+        return null;
+    }
+
+    @Override
     public void execute() {
 
     }
